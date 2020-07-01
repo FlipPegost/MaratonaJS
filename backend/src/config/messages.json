@@ -5,10 +5,20 @@
     "response.json_unauthorized":"Não autorizado.",
     "response.json_not_found":"Não encotrado.",
     "response.json_server_error":"Erro no servidor.",
-    "account.signup.password_confirmation.any.required": "Confirmação de senha é obrigatório",
-    "account.signup.password_confirmation.string.empty": "Confirmação de senha é obrigatório",
-    "account.signup.password.string.empty": "Senha é obrigatório",
-    "account.signup.email.required": "Email é obrigatório",
-    "account.signup.email_exists": "Email já cadastrado ",
-    "account.signup.sucess": "Cadastro efetuado com sucesso"
+    "response.json_no_content": "Apagado com sucesso.",
+    "account.signup.password_confirmation.any.required": "Confirmação de senha é obrigatório.",
+    "account.signup.password_confirmation.string.empty": "Confirmação de senha é obrigatório.",
+    "account.signup.password.string.empty": "Senha é obrigatório.",
+    "account.signup.email.required": "Email é obrigatório.",
+    "account.signup.email_exists": "Email já cadastrado.",
+    "account.signup.sucess": "Cadastro efetuado com sucesso.",
+    
+    "account.signin.password_confirmation.any.required": "Confirmação de senha é obrigatório.",
+    "account.signin.password_confirmation.string.empty": "Confirmação de senha é obrigatório.",
+    "account.signin.password.string.empty": "Senha é obrigatório.",
+    "account.signin.email.required": "Email é obrigatório.",
+    "account.signin.email_exists": "Email já cadastrado.",
+    "account.signin.sucess": "Login efetuado com sucesso.",
+    "account.signin.invalid": "Credencias invalidas."
+    
 }

@@ -11,6 +11,10 @@ const Account = sequelize.define('Account', {
     }
 }); 
 
+Account.associate = (models) => {
+    Account.hasMany(models.Link, {foreignKey: 'accountId'})
+}
+
 Account.prototype.toJSON = function()
 {
     const values = {...this.get() }; 

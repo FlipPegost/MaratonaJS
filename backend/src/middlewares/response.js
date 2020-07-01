@@ -7,7 +7,7 @@ const STATUS_CODE_BAD_REQUEST = 400;
 const STATUS_CODE_UNAUTHORIZED = 401;
 const STATUS_CODE_NOT_FOUND = 404;
 const STATUS_CODE_SERVER_INTERNAL_ERROR = 500;
-
+const STATUS_CODE_NO_CONTENT = 204;
 const jsonOK  = function(data,message,metadata) {
     const status = STATUS_CODE_OK;
     message = (message) ? message : getMessage('response.json_ok');
@@ -26,6 +26,16 @@ const jsonBadRequest  = function(data,message,metadata) {
     metadata = (metadata) ? metadata : { };
     
     
+    
+    this.status(status);
+    this.type(TYPE_JSON);
+
+    return this.json({message, data, metadata, status: status});
+}
+const jsonNoContent  = function(data,message,metadata) {
+    const status =STATUS_CODE_NO_CONTENT;
+    message = (message) ? message : getMessage('response.json_no_content');
+    metadata = (metadata) ? metadata : { };
     
     this.status(status);
     this.type(TYPE_JSON);
@@ -78,7 +88,7 @@ const response = (req,res,next) => {
     res.jsonNotFound = jsonNotFound;
     res.jsonUnauthorized = jsonUnauthorized
     res.jsonServerInternalError = jsonServerInternalError
-
+    res.jsonNoContent = jsonNoContent
     next();
 };
 

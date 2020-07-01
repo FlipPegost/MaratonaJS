@@ -1,5 +1,6 @@
 const express = require('express')
-const authController = require('./controllers/Auth')
+const authController = require('./controllers/auth')
+const linkController = require('./controllers/link')
 const app = express();
 const db = require('./models')
 const response = require('./middlewares/response')
@@ -15,8 +16,4 @@ db.sequelize.sync().then( () =>{
     })
 });
 app.use('/auth',authController);
-
-app.get('/',(req,res) => {
-                return res.json('api running..a.')
-                
-            })
+app.use('/links',linkController);
