@@ -2,3 +2,4 @@
 node_modules/
 api.rest
 .sequelizerc
+package-lock.json
