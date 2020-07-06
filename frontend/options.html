@@ -30,3 +30,48 @@
 							</div>
 							<div class="col-md-3"></div>
 						</div>
+
+
+_________________________________________________________________
+
+
+
+
+$(document).ready(function(){
+    $('#btnAdicionar').submit( function(){
+        $('#canSelectOption option').attr('selected', 'true');
+    })
+});
+
+$('btnToRight').click(function(){
+    console.log('works!')
+    moveSelectedItems('canSelectOption','selectedOptions');
+});
+
+$('btnAllToRight').click(function(){
+    $("canSelectOption option").attr('selected','true');
+    moveSelectedItems('canSelectOption','selectedOptions');
+});
+
+
+$('btnToLeft').click(function(){
+    
+    moveSelectedItems('selectedOptions','canSelectOption');
+});
+
+
+ $('btnAllToLeft').click(function(){
+     $("selectedOptions option").attr('selected','true');
+    moveSelectedItems('selectedOptions','canSelectOption');
+            });
+
+
+
+function moveSelectedItems(source, destination) {
+
+    const selected = $(source+'option:selected').remove();
+
+    const sorted = $.makeArray($(destination+'option').add(selected));
+    
+    $(destination).empty().append(sorted);
+};
